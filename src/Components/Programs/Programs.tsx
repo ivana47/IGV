@@ -3,7 +3,6 @@ import { TbBuildingFactory } from "react-icons/tb";
 import { PiWallBold } from "react-icons/pi";
 import { IoIosBuild } from "react-icons/io";
 import { motion } from "framer-motion";
-import video from '../../assets/video.mp4';
 import { useTranslation } from "react-i18next";
 // @ts-ignore
 import ImageSlider from "./ImageSlider";
