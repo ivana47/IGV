@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "title": "Your Trusted Partner",
+    "description": "IGV IZOLATER d.o.o. Tuzla – over 30 years of experience in industrial insulation. We provide top-quality solutions for thermal insulation and refractory systems in construction and industrial facilities.",
+    "description1": "Quality, expertise, and reliable solutions.",
+    "description2": "Contact us today!",
+    "button": "Explore More"
+  },
+    "about": {
+      "bubble": "more than 30 years with you",
+      "subtitle": "ABOUT US",
+      "title": "History",
+      "paragraph1": "IGV Izolater is a private company founded in 1992 in Tuzla, Bosnia and Herzegovina, specializing in thermal insulation and refractory-shamot works on energy and industrial facilities such as:",
+      "list": [
+        "heating plants",
+        "refineries",
+        "glass factories",
+        "thermal power plants",
+        "cement plants",
+        "industrial lime kilns",
+        "petrochemical plants and other industrial facilities."
+      ],
+      "paragraph2": "Through decades of successful business, we have earned a reputation as a reliable partner by providing top-quality services for overhauls and maintenance of thermal power plants. By using high-quality materials and modern technical equipment, our expert team ensures long-lasting and technically sound solutions for our clients, while adhering to the highest regulations and industry standards. Our mission is to deliver quality, long-lasting, and efficient solutions while respecting professional rules and client requirements."
+    },
+    "contact": {
+      "title": "CONTACT US",
+      "description1": "If you need services from our line of business, feel free to contact us via the form, email, or phone. Our expert team will get back to you as soon as possible.",
+      "description2": "Your comments and suggestions are extremely valuable to us as they help us improve the quality of our services.",
+      "description3": "Contact us with confidence – together we will find the most optimal technical solution for your needs.",
+      "companyName": "IGV IZOLATER d.o.o.",
+      "email": "igv@izolater.net",
+      "phone": "+387 61 734 252",
+      "director": "Rajko Pavić, director",
+      "address1": "Stupine B7/4,",
+      "address2": "Tuzla 75000,",
+      "address3": "Bosnia and Herzegovina",
+      "manager": "Vehid Suljendić, project manager",
+      "phoneManger": "+387 62 399 917",
+      "form": {
+        "name": "Name",
+        "namePlaceholder": "Enter your name",
+        "email": "Email",
+        "emailPlaceholder": "Enter your email",
+        "phone": "Phone number",
+        "phonePlaceholder": "Enter your phone number",
+        "message": "Enter your message",
+        "messagePlaceholder": "Type your message",
+        "submit": "Send"
+      }
+    },
+    "programs": {
+      "features": {
+        "thermal": "Thermal Insulation",
+        "fireproof": "Fireproofing",
+        "scaffold": "Scaffolding"
+      },
+      "note": "We carry out all works using your or our materials, whether it's repairing damage or creating completely new solutions.",
+  
+      "thermalTitle": "Thermal Insulation Works",
+      "thermalIntro": "We perform all types of thermal insulation works on industrial facilities such as:",
+      "thermal": {
+        "0": "Insulation of steam pipes, tanks, vessels, fittings.",
+        "1": "Insulation of turbines and turbine systems.",
+        "2": "Roofing works on industrial facilities.",
+        "3": "Overhaul and repair of existing thermal insulations on facilities.",
+        "4": "Ongoing maintenance of thermal insulation of industrial facilities."
+      },
+  
+      "fireproofTitle": "Fireproof-Refractory Works",
+      "fireproofIntro": "We perform all types of fireproof and refractory works on thermal power facilities, including:",
+      "fireproof": {
+        "0": "Masonry and repair of thermal power plant boilers.",
+        "1": "Masonry and repair of glass furnaces.",
+        "2": "Masonry and repair of lime kilns.",
+        "3": "Masonry and repair of heating plant boilers.",
+        "4": "Masonry and repair of units in refineries and petrochemical plants.",
+        "5": "Shotcreting of fireboxes, channels, burners, and other boiler components.",
+        "6": "Ongoing maintenance of fireproof linings."
+      },
+  
+      "scaffoldTitle": "Scaffolding Works",
+      "scaffoldIntro": "Construction of all types of tubular scaffolding (standard and suspended) at thermal power facilities, including steam pipelines, boilers, turbines, facades, etc."
+    },
+    "navbar": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About Us",
+      "gallery": "Gallery",
+      "contact": "Contact Us"
+    },
+    "footer": {
+      "companyName": "IGV Izolater Ltd for trade and services",
+      "contactTitle": "Contact",
+      "email": "Email:",
+      "location": "Tuzla, Bosnia and Hercegovina",
+      "phone": "Phone:",
+      "creditsTitle": "Credits",
+      "rights": "All rights reserved.",
+      "webDesign": "Web Design:"
+    }
+  }
+  

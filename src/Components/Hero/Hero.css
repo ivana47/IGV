@@ -1,0 +1,46 @@
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(54, 74, 92, 0.55),rgb(30,50,68,0.65)),url('../../assets/pozadina14.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-text{
+    text-align: center;
+    max-width: 800px;
+}
+.hero-text h1{
+    font-size: 67px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.hero-text p{
+    max-width: 750px;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px auto 20px;
+    line-height: 1.7;
+}
+.arrowIcon{
+    margin-left: 10px;
+}
+@media (max-width: 850px){
+    .hero-text h1{
+        font-size: 52px;
+    }
+}
+@media (max-width: 650px){
+    .hero-text h1{
+        font-size: 39px;
+        max-width: 400px;
+        margin: auto;
+    }
+    .hero-text p{
+        font-size: 14px;
+        margin: 15px auto 30px;
+        }
+}

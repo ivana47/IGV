@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "title": "Vaš pouzdan partner",
+    "description": "IGV IZOLATER d.o.o. Tuzla – više od 30 godina iskustva u industrijskoj izolaciji. Pružamo vrhunska rješenja za termoizolaciju i vatrostalne obloge na građevinskim i industrijskim objektima",
+    "description1": "Kvalitet, stručnost i pouzdana rješenja.",
+    "description2": "Kontaktirajte nas danas!",
+    "button": "Istraži više"
+  },
+  "about": {
+    "bubble": "preko 30 godina sa vama",
+    "subtitle": "O NAMA",
+    "title": "Razvoj kompanije",
+    "paragraph1": "IGV Izolater je privatno preduzeće osnovano 1992. godine u Tuzli BiH, specijalizirano za termoizolacione i vatrostalno-šamoterske radove na energetskim i industrijskim postrojenjima kao što su:",
+    "list": [
+      "toplane",
+      "rafinerije",
+      "staklare",
+      "termoelektrane",
+      "cementare",
+      "krečne peći",
+      "petrohemijska postrojenja i ostali industrijski objekti."
+    ],
+    "paragraph2": "Kroz decenije uspješnog poslovanja stekli smo reputaciju pouzdanog partnera pružajući vrhunske usluge kod remonta i održavanja termoenergetskih postrojenja. Korištenjem visokokvalitetnih materijala i moderne tehničke opreme, naš stručni kadar će osigurati dugotrajna i tehnički prihvatljiva rješenja za naše klijente uz poštivanje najviših propisa i industrijskih standarda. Naša misija je pružiti kvalitetna, dugotrajna i efikasna rješenja poštivajući pravila struke i zahtjeve klijenata."
+  },
+  "contact": {
+    "title": "KONTAKTIRAJTE NAS",
+    "description1": "Trebate li usluge iz naše branše poslovanja, slobodno nas kontaktirajte putem obrasca, e-maila ili telefona. Naš stručni tim će vam se javiti u što kraćem roku.",
+    "description2": "Vaši komentari i sugestije su nam izuzetno važni jer nam pomažu da unaprijedimo kvalitet naših usluga.",
+    "description3": "Obratite nam se s povjerenjem-zajedno ćemo pronaći najoptimalnije tehničko rješenje za vaše potrebe.",
+    "companyName": "IGV IZOLATER d.o.o.",
+    "email": "igv@izolater.net",
+    "phone": "+387 61 734 252",
+    "director": "Rajko Pavić, direktor",
+    "address1": "Stupine B7/4",
+    "address2": "Tuzla 75000,",
+    "address3": "Bosna i Hercegovina",
+    "manager": "Vehid Suljendić, šef radilišta",
+    "phoneManger":  "+387 62 399 917",
+    "form": {
+      "name": "Ime",
+      "namePlaceholder": "Unesite Vaše ime/ pravno lice",
+      "email": "E-mail",
+      "emailPlaceholder": "Unesite Vaš e-mail",
+      "phone": "Broj telefona",
+      "phonePlaceholder": "Unesite Vaš broj telefona",
+      "message": "Upišite svoju poruku",
+      "messagePlaceholder": "Unesite poruku",
+      "submit": "Pošalji"
+    }
+  },
+  "programs": {
+    "features": {
+      "thermal": "Termoizolacija",
+      "fireproof": "Vatrostalstvo",
+      "scaffold": "Skela"
+    },
+    "note": "Sve radove izvodimo sa vašim ili našim repromaterijalom, bilo da se radi o sanaciji oštećenja ili izradi potpuno novih rješenja.",
+    
+    "thermalTitle": "Termoizolacioni radovi",
+    "thermalIntro": "Izvodimo sve vrste termoizolacionih radova na industrijskim postrojenjima kao što su:",
+    "thermal": {
+      "0": "Izolacija parovoda, rezervoara, posuda, armatura.",
+      "1": "Izolacija turbina i turbinskih postrojenja.",
+      "2": "Krovopokrivački radovi industrijskih postrojenja.",
+      "3": "Remont i sanacija postojećih termoizolacija na postrojenjima.",
+      "4": "Tekuće održavanje termičke izolacije industrijskih postrojenja."
+    },
+
+    "fireproofTitle": "Vatrostalno-šamoterski radovi",
+    "fireproofIntro": "Izvodimo sve vrste vatrostalno-šamoterskih radova na termoenergetskim postrojenjima, uključujući:",
+    "fireproof": {
+      "0": "Ozidi i sanacije kotlova termoelektrana.",
+      "1": "Ozidi i sanacije staklarskih peći.",
+      "2": "Ozidi i sanacije krečnih peći.",
+      "3": "Ozidi i sanacije kotlova toplana.",
+      "4": "Ozidi i sanacije postrojenja u rafinerijama i petrokemiji.",
+      "5": "Torkretiranje ložišta, kanala, gorionika i ostalih dijelova kotlovskih postrojenja.",
+      "6": "Tekuće održavanje vatrostalnih obloga."
+    },
+
+    "scaffoldTitle": "Skelarski radovi",
+    "scaffoldIntro": "Izrada svih vrsta cijevnih skela (običnih i visećih) na termoenergetskim postrojenjima, uključujući parovode, kotlove, turbine, fasade i dr."
+  },
+  "navbar": {
+    "home": "Početna",
+    "services": "Usluge",
+    "about": "O nama",
+    "gallery": "Galerija",
+    "contact": "Kontaktirajte nas"
+  },
+  "footer": {
+    "companyName": "IGV Izolater d.o.o za trgovinu i usluge",
+    "contactTitle": "Kontakt",
+    "email": "Email:",
+    "location": "Tuzla, Bosna i Hercegovina",
+    "phone": "Telefon:",
+    "creditsTitle": "Kredencije",
+    "rights": "Sva prava zadržana.",
+    "webDesign": "Web Dizajn:"
+  }
+}

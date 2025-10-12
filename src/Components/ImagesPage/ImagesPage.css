@@ -1,0 +1,103 @@
+.heroImages {
+    width: 100%;
+    min-height: 50vh;
+    background: linear-gradient(rgba(91, 124, 153, 0.6),rgba(30,50,68,0.8)), url('../../assets/pozadina_galerija.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-images-text {
+    text-align: center;
+    max-width: 800px;
+}
+.hero-images-text h1 {
+    font-size: 55px;
+    font-weight: 600;
+}
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    margin: 70px 0;
+    overflow: hidden;
+}
+.buttons-container button {
+    background: #1e3244;
+    color: white;
+    padding: 20px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:  0.3s ease, transform 0.2s ease;
+}
+.buttons-container button:hover {
+    background: #5b7c99;
+    transform: scale(1.25);
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Automatski prilagođava broj kolona */
+    gap: 10px; 
+    padding: 20px;
+  }
+  .gallery-image {
+    width: 100%;
+    height: 200px; /* Fiksna visina za konzistentan izgled */
+    object-fit: cover; /* Da slike lijepo popune okvir bez izobličenja */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .gallery-image:hover {
+    transform: scale(1.20); 
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2); 
+  }
+.yarl__button {
+    cursor: pointer !important;
+    z-index: 9999 !important; 
+  }
+
+
+
+
+
+  .gallery-item {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .image-caption {
+    font-size: 0.85rem;
+    color: #444;
+    margin-top: 8px;
+  }
+  p.details{
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .buttons-container {
+      flex-direction: column; /* dugmad jedno ispod drugog */
+      gap: 20px; /* manji razmak */
+      align-items: center; /* centriranje dugmadi */
+    }
+  
+    .buttons-container button {
+      width: 50%; /* neka dugmad budu šira na mobilnom */
+      font-size: 18px; /* manji font */
+      padding: 15px 20px;
+      min-width: 150px;
+    }
+
+    .hero-images-text h1 {
+      font-size: 40px;
+    }
+
+  }
+  

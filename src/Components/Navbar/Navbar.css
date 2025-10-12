@@ -1,0 +1,141 @@
+nav{
+    width: 100%;
+    color: #fff;
+    padding: 4px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    overflow: hidden;
+}
+.logo{
+    max-width: 400px;
+    width: 100%;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 7px 20px;
+    font-size: 20px;
+    font-weight:550;
+}
+nav ul li:hover {
+    transform: scale(1.12);
+}
+.dark-nav{
+    background: #293e4e;
+    transition: 0.5s;
+}
+.menu-icon{
+    display: none;
+}
+.lang-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+.lang-icon:hover {
+    transform: scale(1.4);
+}
+
+ul.hide-mobile-menu{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1150px){
+    .logo{
+        max-width: 340px;
+    }
+    nav ul li{
+        margin: 5px 10px;
+        font-size: 18px;
+    }
+    .btn{
+        font-size: 18px;
+    }
+}
+@media (max-width: 980px){
+    .logo{
+        max-width: 265px;
+    }
+     nav ul li{
+        margin: 5px 10px;
+        font-size: 17px;
+    }
+    .btn{
+        font-size: 15px;
+    } 
+}
+@media (max-width: 870px){
+    .logo{
+        max-width: 290px;
+    }
+    nav{
+        padding: 1px 0;
+    }
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #293e4e;
+        width: 230px;
+        padding-top: 70px;
+        transition: 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px 30px;
+    }
+    .menu-icon{
+        display: block;
+        width: 30px;
+        cursor: pointer;
+    }
+    .hide-mobile-menu{
+        right: -230px;
+    }
+
+    .mobile-menu {
+        right: 0;
+        position: fixed;
+        transition: 0.5s;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100% - 25px);
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+}
+
+/*animation*/
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #2c3e50, #34495e, #2c3e50, #1f2a35);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
