@@ -25,13 +25,16 @@
       "slika23.jpg" : "Kanali staklarske peći",
       "slika24.jpg" : "Ozid gorionika termoelektrane.jpg",
       "slika25.jpg" : "Ozid gorionika kotla",
-      "slika26.jpg" : "Ozid kružne peći",
+      "slika26.jpg" : "Ozid kružne peći NE POKAZUJE SE",
       "slika27.jpg" : "Ozid kanala staklarske peći",
       "slika28.jpg" : "Bočni zid kružne peći",
       "slika29.jpg" : "Svod komore staklarske peći",
       "slika30.jpg" : "Svod kružne peći",
       "slika31.jpg" : "Torkretiranje kanala mlina termoelektrane",
-      "slika32.jpg": "Torkretiranje ložišta kotla"
+      "slika32.jpg": "Torkretiranje ložišta kotla",
+      "slika33.jpg" :"FALI TEKST",
+      "slika34.jpg" :"FALI TEKST",
+      "slika35.jpg" :"FALI TEKST"
     },
     "Termoizolacija": {
       "slika1.jpg": "Izolacija turbine 300MW",
