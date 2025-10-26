@@ -26,12 +26,12 @@ const App = () => {
             <>
               <Hero />
               <About />
-              <Title subTitle='Saradnje' title='Naši partneri' />
-              <Slider />
               <Title subTitle='Usluge' title='Otkrijte kako vam možemo pomoći' />
               <Programs />
-              <Title subTitle='Galerija' title='Fotografije sa terena:' />
+              <Title subTitle='Galerija' title='Dio naših projekata' />
               <Gallery />
+              <Title subTitle='Saradnje' title='Naši partneri' />
+              <Slider />
               <Title subTitle='Kontakt' title='Kontaktirajte nas putem obrasca' />
               <Contact />
               <GoogleMap />

@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Vaš pouzdan partner",
-    "description": "IGV IZOLATER d.o.o. Tuzla – više od 30 godina iskustva u industrijskoj izolaciji. Pružamo vrhunska rješenja za termoizolaciju i vatrostalne obloge na građevinskim i industrijskim objektima",
+    "description": "IGV IZOLATER d.o.o. – više od 30 godina iskustva u industrijskoj izolaciji. Pružamo vrhunska rješenja za termoizolaciju i vatrostalne obloge na građevinskim i industrijskim objektima",
     "description1": "Kvalitet, stručnost i pouzdana rješenja.",
     "description2": "Kontaktirajte nas danas!",
     "button": "Istraži više"
@@ -34,7 +34,7 @@
     "address1": "Stupine B7/4",
     "address2": "Tuzla 75000,",
     "address3": "Bosna i Hercegovina",
-    "manager": "Vehid Suljendić, šef radilišta",
+    "manager": "Vehid Suljendić, šef operative",
     "phoneManger":  "+387 62 399 917",
     "form": {
       "name": "Ime",

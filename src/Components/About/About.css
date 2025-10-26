@@ -123,7 +123,6 @@ flex-basis: 52%;  /*4% space beetween*/
     height: 10px;
     background-color: #121e88e1;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(26, 115, 232, 0.6);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   

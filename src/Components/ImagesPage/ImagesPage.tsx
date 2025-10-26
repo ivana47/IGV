@@ -27,10 +27,19 @@ interface ImageDescriptionJson {
 
 // KORISTIIII LAZY LOADINNNGGGG
 //JPG morasss formatirati
-const formatImages = (images: { src: string }[], folderName: string): CustomSlide[] =>
-  images.map((image) => {
-    const pathParts = image.src.split('/');
-    const filename = pathParts[pathParts.length - 1];
+const formatImages = (images: { src: string }[], folderName: string): CustomSlide[] => {
+  // Sortiramo slike po imenu fajla
+  const sortedImages = images.sort((a, b) => {
+    const nameA = a.src.split('/').pop()!;
+    const nameB = b.src.split('/').pop()!;
+    // izvlačimo broj iz imena fajla "slika<number>.jpg"
+    const numA = parseInt(nameA.match(/\d+/)?.[0] || '0', 10);
+    const numB = parseInt(nameB.match(/\d+/)?.[0] || '0', 10);
+    return numA - numB;
+  });
+
+  return sortedImages.map((image) => {
+    const filename = image.src.split('/').pop()!;
     const description =
       (imageDescriptionsJson as ImageDescriptionJson)[folderName]?.[filename] || '';
     return {
@@ -38,6 +47,8 @@ const formatImages = (images: { src: string }[], folderName: string): CustomSlid
       title: description
     };
   });
+};
+;
 
 const vatrostalniImages = formatImages(
   Object.values(
