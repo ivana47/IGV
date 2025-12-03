@@ -1,8 +1,8 @@
 import './Gallery.css'
-import gallery_1 from '../../assets/WEB/Skela/slika.jpg'
-import gallery_2 from '../../assets/Termoizolacija/slika2.jpg'
-import gallery_3 from '../../assets/Termoizolacija/slika11.jpg'
-import gallery_4 from '../../assets/Vatrostalstvo/slika10.jpg'
+import gallery_1 from '../../assets/front_4/slika1.jpg'
+import gallery_2 from '../../assets/front_4/slika2.jpg'
+import gallery_3 from '../../assets/front_4/slika3.jpg'
+import gallery_4 from '../../assets/front_4/slika4.jpg'
 import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import {motion} from "framer-motion"
@@ -22,25 +22,26 @@ const Gallery = () => {
             <div className="gallery">
                 <img src={gallery_1} alt="" />
                 <div className="caption">
-                TE Tuzla 20.05.2024
+                Termoizolacija kotla TE
                 </div>
             </div>
             <div className="gallery">
                 <img src={gallery_2} alt="" />
                 <div className="caption">
-                    TE Tuzla 20.05.2024
+                    Komora staklarske peći
                 </div>
             </div>
             <div className="gallery">
                 <img src={gallery_3} alt="" />
                 <div className="caption">
-                    Termoizolacija
+                     Remont kotla u termoelektrani
                 </div>
             </div>
             <div className="gallery">
                 <img src={gallery_4} alt="" />
                  <div className="caption">
-                    Termoizolacija
+                                       Zidanje staklarske peći
+
                 </div>
             </div>
             </div>

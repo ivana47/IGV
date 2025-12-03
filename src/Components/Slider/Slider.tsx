@@ -1,12 +1,14 @@
 import "./Slider.css";
 
-type Image ={
+type Image = {
   default: string;
-}
+};
 
 const Slider = () => {
   const vatrostalniImages = Object.values(
-    import.meta.glob('../../assets/Partneri/*.{png,jpg,jpeg,svg}', { eager: true })
+    import.meta.glob("../../assets/Partneri/*.{png,jpg,jpeg,svg}", {
+      eager: true,
+    })
   ).map((image) => ({ src: (image as Image).default }));
 
   return (

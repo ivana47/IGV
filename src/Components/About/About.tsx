@@ -15,8 +15,10 @@ const About = () => {
       className="about"
     >
       <div className="about-left">
-        <img src={about_img} alt="" className="about-img" />
-        <div className="about-bubble">{t("about.bubble")}</div>
+          <div className="about-bubble">{t("about.bubble")}</div>
+        <div className="image-container">
+          <img src={about_img} alt="" className="about-img" />
+        </div>
       </div>
       <div className="about-right">
         <h3>{t("about.subtitle")}</h3>

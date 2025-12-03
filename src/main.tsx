@@ -1,30 +1,34 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
+import global_en from "./translation/en/global.json";
+import global_ba from "./translation/ba/global.json";
+import i18next from "i18next";
+import { I18nextProvider } from "react-i18next";
+import imageDescriptionsBs from './assets/data/imageDescriptions.json'
+import imageDescriptionsEn from './assets/data/imageDecscriptionEngl.json'
 
-import global_en from "./translation/en/global.json"
-import global_ba from "./translation/ba/global.json"
-import i18next from 'i18next'
-import { I18nextProvider } from 'react-i18next'
 
 i18next.init({
-  interpolation : {escapeValue: true},
+  interpolation: { escapeValue: true },
   lng: "ba",
   resources: {
-    ba:{
-      global: global_ba
+    ba: {
+      global: global_ba,
+      imageDescriptions: imageDescriptionsBs,
     },
-    en:{
-      global: global_en
-    }
-  }
-})
+    en: {
+      global: global_en,
+      imageDescriptions: imageDescriptionsEn,
+    },
+  },
+});
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <I18nextProvider i18n={i18next}>
-    <App />
+      <App />
     </I18nextProvider>
-  </StrictMode>,
-)
+  </StrictMode>
+);

@@ -81,6 +81,14 @@
       "scaffoldTitle": "Scaffolding Works",
       "scaffoldIntro": "Construction of all types of tubular scaffolding (standard and suspended) at thermal power facilities, including steam pipelines, boilers, turbines, facades, etc."
     },
+    "gallery": {
+    "title": "Gallery & References",
+    "buttons": {
+      "termo": "Thermal Insulation",
+      "vatro": "Refractory Works",
+      "skela": "Tube Scaffolding"
+      }
+    },
     "navbar": {
       "home": "Home",
       "services": "Services",

@@ -81,6 +81,14 @@
     "scaffoldTitle": "Skelarski radovi",
     "scaffoldIntro": "Izrada svih vrsta cijevnih skela (običnih i visećih) na termoenergetskim postrojenjima, uključujući parovode, kotlove, turbine, fasade i dr."
   },
+  "gallery": {
+  "title": "Galerija i reference",
+  "buttons": {
+    "termo": "Termoizolacija",
+    "vatro": "Vatrostalstvo",
+    "skela": "Cijevna skela"
+  }
+},
   "navbar": {
     "home": "Početna",
     "services": "Usluge",
