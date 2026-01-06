@@ -19,30 +19,21 @@ const formatImages = (
   folderName: string,
   t: (key: string, options?: any) => string
 ): CustomSlide[] => {
-  const sortedImages = images.sort((a, b) => {
-    const nameA = a.src.split("/").pop()!;
-    const nameB = b.src.split("/").pop()!;
-    const numA = parseInt(nameA.match(/\d+/)?.[0] || "0", 10);
-    const numB = parseInt(nameB.match(/\d+/)?.[0] || "0", 10);
-    return numA - numB;
-  });
+  return images.map((image) => {
+    // Ukloni hash iz Vite builda
+    const fullName = image.src.split("/").pop()!; // npr. slika1-D3PJbKd4.jpg
+    const match = fullName.match(/^(.+?)(?:-[a-zA-Z0-9]+)?(\.[a-zA-Z]+)$/);
+    const filename = match ? match[1] + match[2] : fullName; // npr. slika1.jpg
 
-  return sortedImages.map((image) => {
-    const hashedFilename = image.src.split("/").pop()!; // slika11-BJN1-dP4.jpg
-
-    // izvuci originalno ime bez hash-a
-    const originalFilenameMatch = hashedFilename.match(/^(slika\d+)\./);
-    const originalFilename = originalFilenameMatch ? `${originalFilenameMatch[1]}.jpg` : hashedFilename;
-
-    const description = t(originalFilename, {
+    const description = t(filename, {
       ns: "imageDescriptions",
       keyPrefix: folderName,
       defaultValue: "",
     });
 
     return {
-      src: image.src,      // hashirana putanja
-      title: description,  // i18n tekst
+      src: image.src,
+      title: description || "",
       video: false,
     };
   });

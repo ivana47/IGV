@@ -7,7 +7,7 @@ import global_ba from "./translation/ba/global.json";
 import i18next from "i18next";
 import { I18nextProvider } from "react-i18next";
 import imageDescriptionsBs from './assets/data/imageDescriptions.json'
-import imageDescriptionsEn from './assets/data/imageDecscriptionEngl.json'
+import imageDescriptionsEn from './assets/data/imageDescriptionEng.json'
 
 
 i18next.init({
