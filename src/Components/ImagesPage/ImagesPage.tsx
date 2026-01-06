@@ -28,21 +28,26 @@ const formatImages = (
   });
 
   return sortedImages.map((image) => {
-    const filename = image.src.split("/").pop()!;
+    const hashedFilename = image.src.split("/").pop()!; // slika11-BJN1-dP4.jpg
 
-    const description = t(filename, {
+    // izvuci originalno ime bez hash-a
+    const originalFilenameMatch = hashedFilename.match(/^(slika\d+)\./);
+    const originalFilename = originalFilenameMatch ? `${originalFilenameMatch[1]}.jpg` : hashedFilename;
+
+    const description = t(originalFilename, {
       ns: "imageDescriptions",
       keyPrefix: folderName,
       defaultValue: "",
     });
 
     return {
-      src: image.src,
-      title: description || "",
+      src: image.src,      // hashirana putanja
+      title: description,  // i18n tekst
       video: false,
     };
   });
 };
+
 
 const ImagesPage = () => {
   const { t } = useTranslation(["global", "imageDescriptions"]);
