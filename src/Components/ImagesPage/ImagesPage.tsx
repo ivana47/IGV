@@ -29,9 +29,13 @@ const formatImages = (
 
   return sortedImages.map((image) => {
     const filename = image.src.split("/").pop()!;
-    const description = t(`${folderName}.${filename}`, {
+
+    const description = t(filename, {
       ns: "imageDescriptions",
+      keyPrefix: folderName,
+      defaultValue: "",
     });
+
     return {
       src: image.src,
       title: description || "",
