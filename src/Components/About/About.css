@@ -5,6 +5,7 @@
   justify-content: space-between;
 
   /* okvir */
+  padding: 10px;
   max-width: 1690px;
   background: linear-gradient(to right, #f9f9f9, #e6ecf0);
   border-radius: 20px;
