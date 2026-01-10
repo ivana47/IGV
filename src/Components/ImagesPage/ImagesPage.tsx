@@ -59,6 +59,9 @@ const ImagesPage = () => {
     t
   );
 
+  console.log("Vatrostalni images raw:", vatrostalniImages);
+
+
   const termoizolacijaImages = formatImages(
     Object.values(
       import.meta.glob("../../assets/Termoizolacija/*.{png,jpg,jpeg,svg}", {
