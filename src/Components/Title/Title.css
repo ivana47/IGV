@@ -1,13 +1,37 @@
 .title{
     text-align: center;
-    color:#121e88e1;
-    font-size: 18px;
-    font-weight: 600;
-    margin:70px 0 30px;
+    color: var(--c-accent);
+    font-size: var(--fs-eyebrow);
+    font-weight: 700;
+    margin: var(--space-section) 0 1px;
     text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: 0 20px;
+}
+.title p{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.title p::before,
+.title p::after{
+    content: "";
+    width: 26px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--c-accent);
 }
 .title h2{
-    font-size: 32px;
-    margin-top: 5px;
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    color: var(--c-ink);
+    margin-top: 10px;
     text-transform: none;
+    letter-spacing: normal;
+}
+
+@media (max-width: 650px) {
+    .title{
+        margin: calc(var(--space-section) * 0.6) 0 10px;
+    }
 }

@@ -6,6 +6,7 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Footer from "../Footer/Footer";
 import type { Slide } from "yet-another-react-lightbox";
+import { FaPlay } from "react-icons/fa";
 import playIcon from "../../assets/play3.jpg";
 import { useTranslation } from "react-i18next";
 
@@ -22,8 +23,8 @@ const formatImages = (
   return images.map((image) => {
     // Ukloni hash iz Vite builda
     const fullName = image.src.split("/").pop()!; // npr. slika1-D3PJbKd4.jpg
-    const match = fullName.match(/^(.+?)(?:-[a-zA-Z0-9]+)?(\.[a-zA-Z]+)$/);
-    const filename = match ? match[1] + match[2] : fullName; // npr. slika1.jpg
+  // ukloni SVE između zadnje crtice i ekstenzije
+const filename = fullName.replace(/-[^.]+(?=\.)/, "");
 
     const description = t(filename, {
       ns: "imageDescriptions",
@@ -59,9 +60,6 @@ const ImagesPage = () => {
     t
   );
 
-  console.log("Vatrostalni images raw:", vatrostalniImages);
-
-
   const termoizolacijaImages = formatImages(
     Object.values(
       import.meta.glob("../../assets/Termoizolacija/*.{png,jpg,jpeg,svg}", {
@@ -84,7 +82,7 @@ const ImagesPage = () => {
 
   // --- VIDEOS ---
   const vatrostalniVideo: CustomSlide[] = Object.values(
-    import.meta.glob("../../assets/Vatrostalstvo/video.mp4", { eager: true })
+    import.meta.glob("../../assets/Vatrostalstvo/vatrostalstvo_video.mp4", { eager: true })
   ).map((video: any) => ({
     src: video.default,
     video: true,
@@ -139,28 +137,56 @@ const ImagesPage = () => {
         </div>
 
         <div className="buttons-container">
-          <button onClick={() => setActiveGallery("termoizolacija")}>
+          <button
+            className={activeGallery === "termoizolacija" ? "active" : ""}
+            onClick={() => setActiveGallery("termoizolacija")}
+          >
             {t("gallery.buttons.termo")}
           </button>
-          <button onClick={() => setActiveGallery("vatrostalni")}>
+          <button
+            className={activeGallery === "vatrostalni" ? "active" : ""}
+            onClick={() => setActiveGallery("vatrostalni")}
+          >
             {t("gallery.buttons.vatro")}
           </button>
-          <button onClick={() => setActiveGallery("skela")}>
+          <button
+            className={activeGallery === "skela" ? "active" : ""}
+            onClick={() => setActiveGallery("skela")}
+          >
             {t("gallery.buttons.skela")}
           </button>
         </div>
 
+        {!activeGallery && (
+          <p className="gallery-select-prompt">{t("gallery.selectPrompt")}</p>
+        )}
+
         <div className="gallery-container">
           {activeGallery &&
-            images.map((img, index) => (
-              <img
-                key={index}
-                src={img.video ? img.thumbnail : img.src}
-                alt={`Slika ${index + 1}`}
-                onClick={() => setLightboxIndex(index)}
-                className="gallery-image"
-              />
-            ))}
+            images.map((img, index) =>
+              img.video ? (
+                <div
+                  key={index}
+                  className="gallery-video-thumb"
+                  onClick={() => setLightboxIndex(index)}
+                >
+                  <video src={img.src} muted playsInline preload="metadata" />
+                  <span className="play-badge" aria-hidden="true">
+                    <FaPlay />
+                  </span>
+                </div>
+              ) : (
+                <img
+                  key={index}
+                  src={img.src}
+                  alt={`Slika ${index + 1}`}
+                  onClick={() => setLightboxIndex(index)}
+                  className="gallery-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              )
+            )}
         </div>
       </div>
 
@@ -182,8 +208,8 @@ const ImagesPage = () => {
                   <video
                     src={customSlide.src}
                     controls
+                    autoPlay
                     style={{ maxWidth: "95vw", maxHeight: "95vh" }}
-                    poster={customSlide.thumbnail}
                   />
                   {customSlide.title && (
                     <div

@@ -39,12 +39,6 @@
 
 .about {
 
-  h3 {
-    font-weight: 600;
-    font-size: 18px;
-    color: #212EA0;
-  }
-
   h2 {
     font-size: 35px;
     color: #000F38;
@@ -99,34 +93,41 @@
   }
 
   .space {
-    height: 20px;
+    height: 10px;
   }
 
   ul {
-    padding-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding-left: 0;
     margin-bottom: 20px;
+    list-style: none;
     color: #444;
   }
 
   ul li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 14px;
-    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 14px;
+    margin-bottom: 0;
+    background: var(--c-surface, #fff);
+    border: 1px solid var(--c-border, rgba(16, 32, 51, 0.09));
+    border-radius: var(--radius-sm, 12px);
+    font-size: 0.98rem;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.35;
     cursor: default;
-    transition: color 0.3s ease;
+    transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
   }
 
   ul li::before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
+    position: static;
+    flex-shrink: 0;
+    width: 9px;
+    height: 9px;
     background-color: #121e88e1;
     border-radius: 50%;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -134,6 +135,15 @@
 
   ul li:hover {
     color: #121e88e1;
+    border-color: rgba(18, 30, 136, 0.25);
+    box-shadow: var(--shadow-sm, 0 6px 18px rgba(12, 23, 38, 0.08));
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 520px) {
+  .about-right ul {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -169,7 +179,6 @@
   width: 100%;
   font-weight: bold;
   font-size: 1.1rem;
-  white-space: nowrap;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
   animation: float 2s ease-in-out infinite;
 }
@@ -207,5 +216,53 @@
 
   100% {
     transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+/* --- statistika (zadrzano iz redizajna) --- */
+
+.about-stats {
+  display: flex;
+  gap: clamp(20px, 4vw, 44px);
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid var(--c-border, rgba(16, 32, 51, 0.09));
+}
+
+.about-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about-stat strong {
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
+  font-weight: 800;
+  color: var(--c-accent, #121e88e1);
+  line-height: 1;
+}
+
+.about-stat span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #6b7686;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 800px) {
+  .about-stats {
+    justify-content: center;
+  }
+
+  .about-stat {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-stats {
+    gap: 20px;
+    flex-wrap: wrap;
   }
 }

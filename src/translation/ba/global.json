@@ -20,7 +20,12 @@
       "krečne peći",
       "petrohemijska postrojenja i ostali industrijski objekti."
     ],
-    "paragraph2": "Kroz decenije uspješnog poslovanja stekli smo reputaciju pouzdanog partnera pružajući vrhunske usluge kod remonta i održavanja termoenergetskih postrojenja. Korištenjem visokokvalitetnih materijala i moderne tehničke opreme, naš stručni kadar će osigurati dugotrajna i tehnički prihvatljiva rješenja za naše klijente uz poštivanje najviših propisa i industrijskih standarda. Naša misija je pružiti kvalitetna, dugotrajna i efikasna rješenja poštivajući pravila struke i zahtjeve klijenata."
+    "paragraph2": "Kroz decenije uspješnog poslovanja stekli smo reputaciju pouzdanog partnera pružajući vrhunske usluge kod remonta i održavanja termoenergetskih postrojenja. Korištenjem visokokvalitetnih materijala i moderne tehničke opreme, naš stručni kadar će osigurati dugotrajna i tehnički prihvatljiva rješenja za naše klijente uz poštivanje najviših propisa i industrijskih standarda. Naša misija je pružiti kvalitetna, dugotrajna i efikasna rješenja poštivajući pravila struke i zahtjeve klijenata.",
+    "stats": {
+      "years": "Godina iskustva",
+      "industries": "Industrijskih grana",
+      "partners": "Partnera i klijenata"
+    }
   },
   "contact": {
     "title": "KONTAKTIRAJTE NAS",
@@ -36,6 +41,8 @@
     "address3": "Bosna i Hercegovina",
     "manager": "Vehid Suljendić, šef operative",
     "phoneManger":  "+387 62 399 917",
+    "mapEyebrow": "Naša lokacija",
+    "getDirections": "Otvori u Google Maps",
     "form": {
       "name": "Ime",
       "namePlaceholder": "Unesite Vaše ime/ pravno lice",
@@ -83,6 +90,7 @@
   },
   "gallery": {
   "title": "Galerija i reference",
+  "selectPrompt": "Odaberite kategoriju iznad da pogledate slike i video sa realizovanih projekata.",
   "buttons": {
     "termo": "Termoizolacija",
     "vatro": "Vatrostalstvo",
@@ -95,6 +103,24 @@
     "about": "O nama",
     "gallery": "Galerija",
     "contact": "Kontaktirajte nas"
+  },
+  "titles": {
+    "services": {
+      "subTitle": "Usluge",
+      "title": "Otkrijte kako vam možemo pomoći"
+    },
+    "gallery": {
+      "subTitle": "Galerija",
+      "title": "Dio naših projektnih rješenja"
+    },
+    "partners": {
+      "subTitle": "Saradnje",
+      "title": "Naši partneri"
+    },
+    "contact": {
+      "subTitle": "Kontakt",
+      "title": "Kontaktirajte nas putem obrasca"
+    }
   },
   "footer": {
     "companyName": "IGV Izolater d.o.o za trgovinu i usluge",
