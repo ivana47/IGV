@@ -15,13 +15,6 @@ const Hero = () => {
     });
   };
 
-  const handleContactScroll = () => {
-    scroller.scrollTo("contact", {
-      smooth: true,
-      offset: -150,
-      duration: 700,
-    });
-  };
 
   return (
     <div className="hero container" id="hero">
