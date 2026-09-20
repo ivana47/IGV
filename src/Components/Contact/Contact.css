@@ -149,4 +149,13 @@
     .contact-col + .contact-col{
         margin-top: 40px;
     }
+    .contact-col p{
+        font-size: 0.95rem;
+    }
+    .contact-col ul li{
+        font-size: 0.95rem;
+    }
+    .contact-col ul li.contact-name{
+        font-size: 1.05rem;
+    }
 }
