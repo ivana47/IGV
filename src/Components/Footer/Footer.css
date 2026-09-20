@@ -1,55 +1,103 @@
 .footer {
-    display: flex;
-    justify-content: center;
-    padding: 25px 7%;
-    align-items: center;
-    background-color: #293e4e;
-    color: white;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .footer-logo .logo {
-    max-width: 300px;
-  }
+    background: linear-gradient(160deg, var(--c-navy-700), var(--c-navy-900));
+    color: rgba(255, 255, 255, 0.92);
+    position: relative;
+}
 
-  .logo img{
-    width: 100%;
-  }
-  
-  .footer-contact,
-  .footer-credits, 
-  .footer-logo {
-    flex: 1 1 105px;
-    min-width: 290px;
-  }
-  
-  .footer h4 {
-    font-size: 1.3em;
-    margin-bottom: 10px;
-  }
-  
-  .footer p {
-    margin: 5px 0;
-    font-size: 0.9em;
-  }
-  
-  .footer .footer-logo p {
-    margin-top: 5px;
-    margin-left: 6px;
-  }
-  
-  @media (max-width: 768px) {
-    .footer {
-      text-align: center;
+.footer::before {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, var(--c-accent), var(--c-accent-light), var(--c-warm));
+}
+
+.footer-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 56px 24px 34px;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-logo .logo {
+    max-width: 220px;
+}
+
+.footer-contact,
+.footer-credits,
+.footer-logo {
+    flex: 1 1 100px;
+    min-width: 220px;
+}
+
+.footer .footer-tagline {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.footer p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    font-size: 0.92em;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.5;
+}
+
+.footer a {
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer-icon {
+    flex-shrink: 0;
+    font-size: 15px;
+    color: var(--c-accent-light);
+}
+
+.footer .footer-logo p {
+    margin-top: 14px;
+}
+
+.footer-credits p {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.85em;
+}
+
+@media (max-width: 768px) {
+    .footer-inner {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 44px 24px 28px;
     }
-    
+
+    .footer-logo .logo {
+        margin: 0 auto;
+    }
+
+    .footer p,
+    .footer-logo p {
+        justify-content: center;
+    }
+
     .footer h4 {
-      font-size: 1em;
+        font-size: 1em;
     }
-    
-    .footer p {
-      font-size: 0.9em;
-    }
-  }
-  
+}

@@ -6,6 +6,12 @@ import { useTranslation } from "react-i18next";
 const About = () => {
   const [t] = useTranslation("global");
 
+  const stats = [
+    { value: "30+", label: t("about.stats.years") },
+    { value: "7+", label: t("about.stats.industries") },
+    { value: "30+", label: t("about.stats.partners") },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 200 }}
@@ -21,7 +27,7 @@ const About = () => {
         </div>
       </div>
       <div className="about-right">
-        <h3>{t("about.subtitle")}</h3>
+        <h3 className="eyebrow">{t("about.subtitle")}</h3>
         <h2>{t("about.title")}</h2>
         <p>
           {t("about.paragraph1")}
@@ -36,6 +42,14 @@ const About = () => {
           </ul>
           {t("about.paragraph2")}
         </p>
+        <div className="about-stats">
+          {stats.map((stat) => (
+            <div className="about-stat" key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </motion.div>
   );

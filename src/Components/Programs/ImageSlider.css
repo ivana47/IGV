@@ -1,7 +1,8 @@
 .slider-container {
   position: relative;
   width: 100%;
-  height: 700px; 
+  height: 650px;
+  border-radius: var(--radius-md);
   overflow: hidden;
 }
 
@@ -12,25 +13,17 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
 }
 
-
-.activeSlide {
-  opacity: 1;
-  transform: translateX(-50%) rotateY(0deg) scale(1);
-  z-index: 2;
+@media (max-width: 1350px) {
+  .slider-container {
+    height: 550px;
+  }
 }
 
-lastSlide {
-  transform: translateX(-60%) rotateY(45deg) scale(0.8);
-  opacity: 0.5;
-  z-index: 1;
+@media (max-width: 600px) {
+  .slider-container {
+    height: 320px;
+  }
 }
-
-.nextSlide {
-  transform: translateX(-40%) rotateY(-45deg) scale(0.8);
-  opacity: 0.5;
-  z-index: 1;
-}
-

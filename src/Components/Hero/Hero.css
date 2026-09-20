@@ -1,46 +1,124 @@
 .hero{
+    position: relative;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(54, 74, 92, 0.55),rgb(30,50,68,0.65)),url('../../assets/pozadina14.png');
+    background: linear-gradient(180deg, rgba(9, 17, 28, 0.72) 0%, rgba(14, 26, 42, 0.6) 45%, rgba(9, 17, 28, 0.88) 100%), url('../../assets/pozadina14.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     color: #fff;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 85%, var(--c-bg) 120%);
+    pointer-events: none;
+}
 .hero-text{
+    position: relative;
+    z-index: 1;
     text-align: center;
-    max-width: 800px;
+    max-width: 860px;
 }
-.hero-text h1{
-    font-size: 67px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-.hero-text p{
+
+.hero-text p {
     max-width: 750px;
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: clamp(14px, 10px + 1vw, 20px);
     margin: 10px auto 20px;
     line-height: 1.7;
 }
+
+.hero-text h1{
+    font-size: var(--fs-h1);
+    font-weight: 700;
+    line-height: 1.08;
+    margin-bottom: 24px;
+    text-wrap: balance;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+}
+.hero-lead{
+    max-width: 720px;
+    font-weight: 400;
+    font-size: var(--fs-lead);
+    margin: 0 auto 18px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-actions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
 .arrowIcon{
-    margin-left: 10px;
+    margin-left: 2px;
+}
+.hero-scroll-cue{
+    position: absolute;
+    left: 50%;
+    bottom: 36px;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: var(--radius-pill);
+    z-index: 1;
+}
+.hero-scroll-cue span{
+    display: block;
+    width: 4px;
+    height: 8px;
+    margin: 7px auto 0;
+    border-radius: 2px;
+    background: #fff;
+    animation: hero-scroll-dot 1.8s ease infinite;
+}
+@keyframes hero-scroll-dot{
+    0% { transform: translateY(0); opacity: 1; }
+    60% { transform: translateY(14px); opacity: 0; }
+    61% { transform: translateY(0); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }
 @media (max-width: 850px){
     .hero-text h1{
-        font-size: 52px;
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero{
+        background-attachment: scroll;
     }
 }
 @media (max-width: 650px){
-    .hero-text h1{
-        font-size: 39px;
-        max-width: 400px;
-        margin: auto;
+    .hero{
+        padding: 130px 18px 70px;
     }
-    .hero-text p{
-        font-size: 14px;
-        margin: 15px auto 30px;
-        }
+    .hero-lead{
+        font-size: 15px;
+        margin: 0 auto 14px;
+    }
+    .hero-sub{
+        font-size: 0.85rem;
+        margin: 0 auto 32px;
+    }
+    .hero-actions .btn{
+        width: 100%;
+    }
+    .hero-actions{
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .hero-scroll-cue{
+        display: none;
+    }
 }

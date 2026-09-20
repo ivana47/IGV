@@ -80,10 +80,22 @@ const Navbar = () => {
                             {t("navbar.contact")}
                         </Link>
                     </li>
-                    <img src={ba_img} alt="Bosnian" className="lang-icon" onClick={() => { handleChangeLanguage("ba"); closeMenu(); }} />
-                    <img src={en_img} alt="English" className="lang-icon" onClick={() => { handleChangeLanguage("en"); closeMenu(); }} />
+                    <li className="lang-switch">
+                        <img
+                            src={ba_img}
+                            alt="Bosanski"
+                            className={`lang-icon ${i18n.language === 'ba' ? 'active' : ''}`}
+                            onClick={() => { handleChangeLanguage("ba"); closeMenu(); }}
+                        />
+                        <img
+                            src={en_img}
+                            alt="English"
+                            className={`lang-icon ${i18n.language === 'en' ? 'active' : ''}`}
+                            onClick={() => { handleChangeLanguage("en"); closeMenu(); }}
+                        />
+                    </li>
                 </ul>
-                <IoMenu size={60} className='menu-icon' onClick={toggleMenu} />
+                <IoMenu size={30} className='menu-icon' onClick={toggleMenu} />
             </nav>
             {mobileMenu && <div className="overlay" onClick={closeMenu}></div>}
         </>

@@ -1,0 +1,92 @@
+.map-section {
+    max-width: var(--container);
+    margin: 0 auto var(--space-section);
+}
+
+.map-card {
+    display: flex;
+    background: var(--c-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    min-height: 340px;
+}
+
+.map-info {
+    flex: 0 0 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+    padding: 44px 40px;
+    background: linear-gradient(160deg, var(--c-navy-700), var(--c-navy-900));
+    color: #fff;
+}
+
+.map-info .eyebrow {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.map-info .eyebrow::before  {
+    background: rgba(255, 255, 255, 0.75);
+}
+.map-info .eyebrow::after  {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.map-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.map-info p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 10px;
+}
+
+.map-pin {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: #fff;
+}
+
+.map-frame {
+    flex: 1;
+    width: 100%;
+    min-height: 340px;
+    border: 0;
+    filter: saturate(0.9) contrast(1.02);
+}
+
+@media (max-width: 900px) {
+    .map-card {
+        flex-direction: column;
+    }
+
+    .map-info {
+        flex-basis: auto;
+        padding: 36px 28px;
+    }
+
+    .map-frame {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 500px) {
+    .map-section {
+        padding: 0 16px;
+    }
+
+    .map-info {
+        padding: 30px 22px;
+    }
+}

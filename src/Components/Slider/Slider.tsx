@@ -15,12 +15,16 @@ const Slider = () => {
     <div className="slider">
       <div className="slide-track">
         {vatrostalniImages.map((image, index) => (
-          <img key={index} src={image.src} alt={`slider-img-${index}`} />
+          <div className="logo-card" key={index}>
+            <img src={image.src} alt={`slider-img-${index}`} />
+          </div>
         ))}
       </div>
       <div className="slide-track">
         {vatrostalniImages.map((image, index) => (
-          <img key={index} src={image.src} alt={`slider-img-${index}`} />
+          <div className="logo-card" key={index}>
+            <img src={image.src} alt={`slider-img-${index}`} />
+          </div>
         ))}
       </div>
     </div>

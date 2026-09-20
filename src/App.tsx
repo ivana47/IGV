@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import Programs from './Components/Programs/Programs'
@@ -8,10 +9,13 @@ import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 import GoogleMap from './Components/GoogleMap/GoogleMap'
 import { BrowserRouter as Router, Route, Routes } from 'react-router'
-import ImagesPage from './Components/ImagesPage/ImagesPage'
 import Slider from './Components/Slider/Slider'
+import { useTranslation } from 'react-i18next'
+
+const ImagesPage = lazy(() => import('./Components/ImagesPage/ImagesPage'))
 
 const App = () => {
+  const [t] = useTranslation("global");
 
   return (
     <Router>
@@ -22,19 +26,23 @@ const App = () => {
             <>
               <Hero />
               <About />
-              <Title subTitle='Usluge' title='Otkrijte kako vam možemo pomoći' />
+              <Title subTitle={t('titles.services.subTitle')} title={t('titles.services.title')} />
               <Programs />
-              <Title subTitle='Galerija' title='Dio naših projektnih rješenja' />
+              <Title subTitle={t('titles.gallery.subTitle')} title={t('titles.gallery.title')} />
               <Gallery />
-              <Title subTitle='Saradnje' title='Naši partneri' />
+              <Title subTitle={t('titles.partners.subTitle')} title={t('titles.partners.title')} />
               <Slider />
-              <Title subTitle='Kontakt' title='Kontaktirajte nas putem obrasca' />
+              <Title subTitle={t('titles.contact.subTitle')} title={t('titles.contact.title')} />
               <Contact />
               <GoogleMap />
               <Footer />
             </>
           } />
-          <Route path='/images' element={<ImagesPage />} />
+          <Route path='/images' element={
+            <Suspense fallback={null}>
+              <ImagesPage />
+            </Suspense>
+          } />
         </Routes>
       </div>
     </Router>
