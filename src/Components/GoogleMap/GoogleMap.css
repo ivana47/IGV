@@ -89,4 +89,12 @@
     .map-info {
         padding: 30px 22px;
     }
+
+    .map-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .map-info p {
+        font-size: 0.92rem;
+    }
 }

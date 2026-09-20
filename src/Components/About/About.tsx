@@ -21,14 +21,16 @@ const About = () => {
       className="about"
     >
       <div className="about-left">
-          <div className="about-bubble">{t("about.bubble")}</div>
         <div className="image-container">
           <img src={about_img} alt="" className="about-img" />
+          <div className="about-bubble">{t("about.bubble")}</div>
         </div>
       </div>
       <div className="about-right">
-        <h3 className="eyebrow">{t("about.subtitle")}</h3>
-        <h2>{t("about.title")}</h2>
+        <div className="about-heading">
+          <h3 className="eyebrow">{t("about.subtitle")}</h3>
+          <h2>{t("about.title")}</h2>
+        </div>
         <p>
           {t("about.paragraph1")}
           <div className="space"></div>
