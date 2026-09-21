@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(180deg, rgba(9, 17, 28, 0.72) 0%, rgba(14, 26, 42, 0.6) 45%, rgba(9, 17, 28, 0.88) 100%), url('../../assets/pozadina14.jpg');
+    background: linear-gradient(180deg, rgba(9, 17, 28, 0.6) 0%, rgba(14, 26, 42, 0.5) 45%, rgba(9, 17, 28, 0.8) 100%), url('../../assets/pozadina14.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -30,7 +30,7 @@
     max-width: 750px;
     font-weight: 400;
     font-size: clamp(14px, 10px + 1vw, 20px);
-    margin: 10px auto 20px;
+    margin: 32px auto 30px;
     line-height: 1.7;
 }
 

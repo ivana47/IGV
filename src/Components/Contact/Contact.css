@@ -1,5 +1,6 @@
 .contact{
     margin: var(--space-section) auto;
+    width: calc(100% - 40px);
     max-width: var(--container);
     display: flex;
     align-items: flex-start;
@@ -144,7 +145,6 @@
 @media (max-width: 750px){
     .contact{
         display: block;
-        margin: var(--space-section) 16px;
     }
     .contact-col + .contact-col{
         margin-top: 40px;

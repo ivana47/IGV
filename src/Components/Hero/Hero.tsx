@@ -26,10 +26,10 @@ const Hero = () => {
         className="hero-text"
       >
         <h1>{t("hero.title")}</h1>
+        <p>{t("hero.description")}</p>
         <p>
+          {t("hero.description1")}
           <br />
-          {t("hero.description")} <br /> <br /> <br />
-          {t("hero.description1")} <br />
           {t("hero.description2")}
         </p>
         <div className="hero-actions">

@@ -30,7 +30,7 @@ const Navbar = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
 
     const toggleMenu = () => {
-        setMobileMenu(!mobileMenu);
+        setMobileMenu((prev) => !prev);
     };
 
     const closeMenu = () => {

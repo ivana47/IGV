@@ -71,7 +71,6 @@ html {
 body{
     background: var(--c-bg);
     color: var(--c-body);
-    overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -87,9 +86,6 @@ a{
     outline: 2px solid var(--c-accent-light);
     outline-offset: 3px;
     border-radius: 4px;
-}
-.container{
-    overflow-x: hidden;
 }
 .eyebrow {
     display: inline-flex;

@@ -7,6 +7,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Footer from "../Footer/Footer";
 import type { Slide } from "yet-another-react-lightbox";
 import { FaPlay } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 import playIcon from "../../assets/play3.jpg";
 import { useTranslation } from "react-i18next";
 
@@ -201,6 +202,17 @@ const ImagesPage = () => {
           controller={{ closeOnBackdropClick: true }}
           plugins={[Thumbnails]}
           render={{
+            buttonClose: () => (
+              <button
+                type="button"
+                className="yarl__button"
+                onClick={() => setLightboxIndex(null)}
+                aria-label="Zatvori"
+                style={{ position: "relative", zIndex: 10000 }}
+              >
+                <IoClose className="yarl__icon" />
+              </button>
+            ),
             slide: ({ slide }) => {
               const customSlide = slide as CustomSlide;
               return customSlide.video ? (
@@ -208,7 +220,7 @@ const ImagesPage = () => {
                   <video
                     src={customSlide.src}
                     controls
-                    autoPlay
+                    controlsList="nodownload"
                     style={{ maxWidth: "95vw", maxHeight: "95vh" }}
                   />
                   {customSlide.title && (

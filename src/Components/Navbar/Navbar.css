@@ -9,7 +9,17 @@ nav{
     justify-content: space-between;
     z-index: 100;
     padding: 10px clamp(13px, 2vw, 15px);
-    transition: background-color 0.45s var(--ease), backdrop-filter 0.45s var(--ease), box-shadow 0.45s var(--ease), padding 0.35s var(--ease);
+    transition: padding 0.35s var(--ease);
+}
+nav::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: transparent;
+    box-shadow: none;
+    transition: background-color 0.45s var(--ease), backdrop-filter 0.45s var(--ease), box-shadow 0.45s var(--ease);
 }
 .logo{
     max-width: 350px;
@@ -65,12 +75,14 @@ nav ul li .btn{
     font-size: 17px;
 }
 .dark-nav{
-    background: rgba(22, 40, 59, 0.82);
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.dark-nav::before{
+    background-color: rgba(22, 40, 59, 0.82);
     backdrop-filter: blur(12px) saturate(140%);
     -webkit-backdrop-filter: blur(14px) saturate(140%);
     box-shadow: 0 8px 30px rgba(6, 14, 24, 0.28);
-    padding-top: 12px;
-    padding-bottom: 12px;
 }
 .menu-icon{
     display: none;

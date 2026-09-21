@@ -1,4 +1,5 @@
 .map-section {
+    width: calc(100% - 40px);
     max-width: var(--container);
     margin: 0 auto var(--space-section);
 }
@@ -82,10 +83,6 @@
 }
 
 @media (max-width: 500px) {
-    .map-section {
-        padding: 0 16px;
-    }
-
     .map-info {
         padding: 30px 22px;
     }

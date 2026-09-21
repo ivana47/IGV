@@ -1,9 +1,9 @@
 {
   "hero": {
     "title": "Vaš pouzdan partner",
-    "description": "IGV IZOLATER d.o.o. – više od 30 godina iskustva u industrijskoj izolaciji. Pružamo vrhunska rješenja za termoizolaciju i vatrostalne obloge na građevinskim i industrijskim objektima",
-    "description1": "Kvalitet, stručnost i pouzdana rješenja.",
-    "description2": "Kontaktirajte nas danas!",
+    "description": "IGV IZOLATER d.o.o. – više od 30 godina iskustva u industrijskoj izolaciji. Pružamo vrhunska rješenja za termoizolaciju i vatrostalne obloge na industrijskim objektima i postrojenjima",
+    "description1": "Kvalitet, stručnost, povjerenje i pouzdana rješenja.",
+    "description2": "Kontaktirajte nas već danas!",
     "button": "Istraži više"
   },
   "about": {
@@ -24,7 +24,7 @@
     "stats": {
       "years": "Godina iskustva",
       "industries": "Industrijskih grana",
-      "partners": "Partnera i klijenata"
+      "partners": "Urađenih projekata"
     }
   },
   "contact": {

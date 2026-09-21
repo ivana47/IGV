@@ -1,8 +1,8 @@
 {
   "hero": {
     "title": "Your Trusted Partner",
-    "description": "IGV IZOLATER d.o.o. – over 30 years of experience in industrial insulation. We provide top-quality solutions for thermal insulation and refractory systems in construction and industrial facilities.",
-    "description1": "Quality, expertise, and reliable solutions.",
+    "description": "IGV IZOLATER d.o.o. – over 30 years of experience in industrial insulation. We provide top-quality solutions for thermal insulation and refractory systems for industrial facilities and plants.",
+    "description1": "Quality, expertise, trust and reliable solutions.",
     "description2": "Contact us today!",
     "button": "Explore More"
   },
@@ -24,7 +24,7 @@
       "stats": {
         "years": "Years of experience",
         "industries": "Industries served",
-        "partners": "Partners & clients"
+        "partners": "Completed projects"
       }
     },
     "contact": {

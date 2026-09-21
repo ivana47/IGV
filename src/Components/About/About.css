@@ -1,5 +1,6 @@
 .about {
   margin: 100px auto;
+  width: calc(100% - 40px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -122,6 +123,8 @@
     font-size: 0.98rem;
     font-weight: 500;
     line-height: 1.35;
+    overflow-wrap: break-word;
+    word-break: break-word;
     cursor: default;
     transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
   }
