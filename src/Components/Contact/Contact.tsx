@@ -49,7 +49,6 @@ const Contact = () => {
       className='contact'
       id="contact">
       <div className="contact-col">
-        <h3>{t("contact.title")} <MdEmail className='messageIcon' /></h3>
         <p>
           {t("contact.description1")}<br />
           {t("contact.description2")}<br />

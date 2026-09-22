@@ -356,9 +356,9 @@
     }
 
     .hover-overlay {
+        position: static;
         padding: 1rem;
         align-items: flex-start;
-        overflow-y: auto;
     }
 
     .overlay-content {
@@ -366,7 +366,6 @@
         padding: 1rem;
         border-radius: var(--radius-sm);
         text-align: left;
-        word-wrap: break-word;
     }
 
     .overlay-content h2 {
