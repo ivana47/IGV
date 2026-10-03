@@ -101,7 +101,7 @@
 @media (max-width: 650px){
     .hero{
         padding: 130px 18px 70px;
-        background-image: linear-gradient(180deg, rgba(9, 17, 28, 0.3) 0%, rgba(14, 26, 42, 0.1) 45%, rgba(9, 17, 28, 0.1) 100%), url('../../assets/pozadina14.jpg');
+        background-image: linear-gradient(180deg, rgba(9, 17, 28, 0.4) 0%, rgba(14, 26, 42, 0.1) 45%, rgba(9, 17, 28, 0.1) 100%), url('../../assets/pozadina14.jpg');
     }
     .hero-lead{
         font-size: 15px;

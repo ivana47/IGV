@@ -355,6 +355,19 @@
         padding: 16px;
     }
 
+    .image-overlay-container {
+        display: grid;
+    }
+
+    .image-overlay-container > * {
+        grid-area: 1 / 1;
+    }
+
+    .image-overlay-container .slider-container {
+        min-height: 320px;
+        height: 100%;
+    }
+
     .hover-overlay {
         position: static;
         padding: 1rem;

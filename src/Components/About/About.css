@@ -41,8 +41,6 @@
 .about {
 
   h2 {
-    font-size: 35px;
-    color: #000F38;
     margin: 10px 0;
     max-width: 400px;
     overflow-y: hidden;
@@ -84,7 +82,7 @@
 
 .about-right {
   h2 {
-    color: #121e88e1;
+    color: var(--c-ink);;
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 20px;

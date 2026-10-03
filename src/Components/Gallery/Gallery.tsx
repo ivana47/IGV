@@ -6,6 +6,9 @@ import gallery_4 from '../../assets/front_4/slika4.jpg'
 import gallery_5 from '../../assets/front_4/slika5.jpg'
 import gallery_6 from '../../assets/front_4/slika6.jpg'
 import gallery_7 from '../../assets/front_4/slika7.jpg'
+import gallery_8 from '../../assets/front_4/slika444.jpg'
+import gallery_9 from '../../assets/front_4/slika8.jpg'
+import gallery_10 from '../../assets/front_4/slika9.jpg'
 import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { motion } from "framer-motion"
@@ -16,9 +19,13 @@ const cards = [
     { src: gallery_2, caption: 'Komora staklarske peći' },
     { src: gallery_3, caption: 'Remont kotla u termoelektrani' },
     { src: gallery_4, caption: 'Zidanje staklarske peći' },
+    { src: gallery_10, caption: 'Izolacija turbine' },
     { src: gallery_5, caption: 'Torkretiranje kanala u TE' },
     { src: gallery_6, caption: 'Priprema mase za torkretiranje' },
     { src: gallery_7, caption: 'Montaža skele u ložištu kotla' },
+    { src: gallery_8, caption: 'Izolacija turbine' },
+    { src: gallery_9, caption: 'Termoizolacija kanala' },
+
 ]
 
 const AUTO_ROTATE_MS = 2800
