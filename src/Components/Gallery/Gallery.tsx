@@ -13,18 +13,19 @@ import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { motion } from "framer-motion"
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const cards = [
-    { src: gallery_1, caption: 'Termoizolacija kotla TE' },
-    { src: gallery_2, caption: 'Komora staklarske peći' },
-    { src: gallery_3, caption: 'Remont kotla u termoelektrani' },
-    { src: gallery_4, caption: 'Zidanje staklarske peći' },
-    { src: gallery_10, caption: 'Izolacija turbine' },
-    { src: gallery_5, caption: 'Torkretiranje kanala u TE' },
-    { src: gallery_6, caption: 'Priprema mase za torkretiranje' },
-    { src: gallery_7, caption: 'Montaža skele u ložištu kotla' },
-    { src: gallery_8, caption: 'Izolacija turbine' },
-    { src: gallery_9, caption: 'Termoizolacija kanala' },
+    { src: gallery_1 },
+    { src: gallery_2 },
+    { src: gallery_3 },
+    { src: gallery_4 },
+    { src: gallery_10 },
+    { src: gallery_5 },
+    { src: gallery_6 },
+    { src: gallery_7 },
+    { src: gallery_8 },
+    { src: gallery_9 },
 
 ]
 
@@ -61,6 +62,7 @@ const getCardStyle = (cardIndex: number, currentIndex: number): CSSProperties =>
 }
 
 const Gallery = () => {
+    const [t] = useTranslation("global")
     const [index, setIndex] = useState(0)
     const isPausedRef = useRef(false)
     const isDraggingRef = useRef(false)
@@ -69,7 +71,6 @@ const Gallery = () => {
     const dragDeltaRef = useRef(0)
     const resumeTimeoutRef = useRef<number | undefined>(undefined)
 
-    // Auto-rotacija karusela
     useEffect(() => {
         const id = window.setInterval(() => {
             if (isPausedRef.current || isDraggingRef.current) return
@@ -139,7 +140,7 @@ const Gallery = () => {
             viewport={{ once: true }}
             className='layer'>
             <div className="gallery-layer">
-                <p className="carousel-hint">Prevucite ili kliknite na sliku</p>
+                <p className="carousel-hint">{t("gallery.carouselHint")}</p>
                 <div
                     className="stage"
                     onMouseEnter={pause}
@@ -159,7 +160,7 @@ const Gallery = () => {
                             onClick={() => goTo(i)}
                         >
                             <img src={card.src} alt="" draggable={false} />
-                            <div className="card-caption">{card.caption}</div>
+                            <div className="card-caption">{t(`gallery.captions.${i}`)}</div>
                         </div>
                     ))}
                 </div>
@@ -170,7 +171,7 @@ const Gallery = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 className='btn-container'>
-                <Link to='/images' className='btn dark-btn'>Pogledaj više <FaArrowRight className='arrowIcon' /></Link>
+                <Link to='/images' className='btn dark-btn'>{t("gallery.viewMore")} <FaArrowRight className='arrowIcon' /></Link>
             </motion.div>
 
         </motion.div>

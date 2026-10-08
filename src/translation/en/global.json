@@ -42,6 +42,7 @@
       "phoneManger": "+387 62 399 917",
       "mapEyebrow": "Our location",
       "getDirections": "Open in Google Maps",
+      "mapTitle": "IGV Izolater d.o.o. – location",
       "form": {
         "name": "Name",
         "namePlaceholder": "Enter your name",
@@ -51,7 +52,9 @@
         "phonePlaceholder": "Enter your phone number",
         "message": "Enter your message",
         "messagePlaceholder": "Type your message",
-        "submit": "Send"
+        "submit": "Send",
+        "sending": "Sending...",
+        "success": "Your message has been sent successfully"
       }
     },
     "programs": {
@@ -94,7 +97,23 @@
       "termo": "Thermal Insulation",
       "vatro": "Refractory Works",
       "skela": "Tube Scaffolding"
-      }
+      },
+    "carouselHint": "Swipe or click on an image",
+    "viewMore": "View more",
+    "imageAlt": "Image",
+    "close": "Close",
+    "captions": {
+      "0": "Thermal insulation of a TPP boiler",
+      "1": "Glass furnace chamber",
+      "2": "Boiler overhaul at a thermal power plant",
+      "3": "Glass furnace bricklaying",
+      "4": "Turbine insulation",
+      "5": "Shotcreting of a duct at a TPP",
+      "6": "Preparing the shotcrete mix",
+      "7": "Scaffolding assembly in a boiler furnace",
+      "8": "Turbine insulation",
+      "9": "Thermal insulation of a duct"
+    }
     },
     "navbar": {
       "home": "Home",
@@ -128,8 +147,7 @@
       "location": "Tuzla, Bosnia and Hercegovina",
       "phone": "Phone:",
       "creditsTitle": "Credits",
-      "rights": "All rights reserved.",
-      "webDesign": "Web Design:"
+      "rights": "All rights reserved."
     }
   }
   

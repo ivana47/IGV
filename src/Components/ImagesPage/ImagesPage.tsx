@@ -22,10 +22,9 @@ const formatImages = (
   t: (key: string, options?: any) => string
 ): CustomSlide[] => {
   return images.map((image) => {
-    // Ukloni hash iz Vite builda
     const fullName = image.src.split("/").pop()!; // npr. slika1-D3PJbKd4.jpg
-  // ukloni SVE između zadnje crtice i ekstenzije
-const filename = fullName.replace(/-[^.]+(?=\.)/, "");
+    // Ukloni Vite hash (sve između zadnje crtice i ekstenzije)
+    const filename = fullName.replace(/-[^.]+(?=\.)/, "");
 
     const description = t(filename, {
       ns: "imageDescriptions",
@@ -50,7 +49,6 @@ const ImagesPage = () => {
   >(null);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  // --- IMAGES ---
   const vatrostalniImages = formatImages(
     Object.values(
       import.meta.glob("../../assets/Vatrostalstvo/*.{png,jpg,JPG,jpeg,svg}", {
@@ -81,7 +79,6 @@ const ImagesPage = () => {
     t
   );
 
-  // --- VIDEOS ---
   const vatrostalniVideo: CustomSlide[] = Object.values(
     import.meta.glob("../../assets/Vatrostalstvo/vatrostalstvo_video.mp4", { eager: true })
   ).map((video: any) => ({
@@ -108,7 +105,6 @@ const ImagesPage = () => {
     thumbnail: playIcon,
   }));
 
-  // --- SLIDES ---
   const vatrostalniSlides: CustomSlide[] = [
     ...vatrostalniImages,
     ...vatrostalniVideo,
@@ -180,7 +176,7 @@ const ImagesPage = () => {
                 <img
                   key={index}
                   src={img.src}
-                  alt={`Slika ${index + 1}`}
+                  alt={`${t("gallery.imageAlt")} ${index + 1}`}
                   onClick={() => setLightboxIndex(index)}
                   className="gallery-image"
                   loading="lazy"
@@ -207,7 +203,7 @@ const ImagesPage = () => {
                 type="button"
                 className="yarl__button"
                 onClick={() => setLightboxIndex(null)}
-                aria-label="Zatvori"
+                aria-label={t("gallery.close")}
                 style={{ position: "relative", zIndex: 10000 }}
               >
                 <IoClose className="yarl__icon" />

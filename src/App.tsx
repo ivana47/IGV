@@ -18,7 +18,7 @@ const App = () => {
   const [t] = useTranslation("global");
 
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div>
         <Navbar />
         <Routes>

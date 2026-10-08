@@ -37,7 +37,6 @@ const Footer = () => {
         <div className="footer-credits">
           <h4>{t("footer.creditsTitle")}</h4>
           <p>&copy; {new Date().getFullYear()} IGV Izolater d.o.o. {t("footer.rights")}</p>
-          <p>{t("footer.webDesign")} I.P.</p>
         </div>
       </div>
     </motion.footer>

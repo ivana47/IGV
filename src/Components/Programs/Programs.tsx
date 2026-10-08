@@ -18,7 +18,7 @@ const Programs = () => {
   const imageRef = useRef<HTMLDivElement>(null);
 
   const handleClick = (feature: Feature) => {
-    const next = active === feature ? null : feature; // toggle na klik
+    const next = active === feature ? null : feature;
     setActive(next);
 
     // Na mobilnom (stacked layout) tekst i slika nisu jedno pored drugog,
@@ -28,7 +28,7 @@ const Programs = () => {
     }
   };
 
-  const showOverlay = hovered || active; // overlay se prikazuje ako je hover ili active
+  const showOverlay = hovered || active;
 
   const features: { key: Feature; icon: ReactNode; label: string }[] = [
     {
@@ -58,7 +58,6 @@ const Programs = () => {
       id="program"
     >
       <div className="banner-container">
-        {/* Tekst */}
         <div className="banner-text">
           <div className="banner-features">
             {features.map((feature, i) => (
@@ -84,7 +83,6 @@ const Programs = () => {
           <p className="final-note">{t("programs.note")}</p>
         </div>
 
-        {/* Slika + overlay */}
         <div className="banner-image" ref={imageRef}>
           <div className="image-overlay-container">
             <ImageSlider />

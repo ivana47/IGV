@@ -42,6 +42,7 @@
     "phoneManger":  "+387 62 399 917",
     "mapEyebrow": "Naša lokacija",
     "getDirections": "Otvori u Google Maps",
+    "mapTitle": "IGV Izolater d.o.o. – lokacija",
     "form": {
       "name": "Ime",
       "namePlaceholder": "Unesite Vaše ime/ pravno lice",
@@ -51,7 +52,9 @@
       "phonePlaceholder": "Unesite Vaš broj telefona",
       "message": "Upišite svoju poruku",
       "messagePlaceholder": "Unesite poruku",
-      "submit": "Pošalji"
+      "submit": "Pošalji",
+      "sending": "Slanje...",
+      "success": "Poruka je uspješno poslana"
     }
   },
   "programs": {
@@ -94,6 +97,22 @@
     "termo": "Termoizolacija",
     "vatro": "Vatrostalstvo",
     "skela": "Cijevna skela"
+  },
+  "carouselHint": "Prevucite ili kliknite na sliku",
+  "viewMore": "Pogledaj više",
+  "imageAlt": "Slika",
+  "close": "Zatvori",
+  "captions": {
+    "0": "Termoizolacija kotla TE",
+    "1": "Komora staklarske peći",
+    "2": "Remont kotla u termoelektrani",
+    "3": "Zidanje staklarske peći",
+    "4": "Izolacija turbine",
+    "5": "Torkretiranje kanala u TE",
+    "6": "Priprema mase za torkretiranje",
+    "7": "Montaža skele u ložištu kotla",
+    "8": "Izolacija turbine",
+    "9": "Termoizolacija kanala"
   }
 },
   "navbar": {
@@ -128,7 +147,6 @@
     "location": "Tuzla, Bosna i Hercegovina",
     "phone": "Telefon:",
     "creditsTitle": "Kredencije",
-    "rights": "Sva prava zadržana.",
-    "webDesign": "Web Dizajn:"
+    "rights": "Sva prava zadržana."
   }
 }
