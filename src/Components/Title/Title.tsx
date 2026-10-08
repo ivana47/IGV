@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Title.css"
+import Reveal from '../Reveal/Reveal'
 
 interface TitleProps {
     subTitle: string;
@@ -8,12 +9,12 @@ interface TitleProps {
 
 const Title: React.FC<TitleProps> = ({ subTitle, title }) => {
     return (
-        <div className='title'>
+        <Reveal className='title'>
             <p>
                 {subTitle}
             </p>
             <h2>{title}</h2>
-        </div>
+        </Reveal>
     )
 }
 

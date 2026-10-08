@@ -1,6 +1,6 @@
 import "./About.css";
 import about_img from "../../assets/personLogo.png";
-import { motion } from "framer-motion";
+import Reveal from "../Reveal/Reveal";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
@@ -13,20 +13,14 @@ const About = () => {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 200 }}
-      transition={{ duration: 1 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      className="about"
-    >
-      <div className="about-left">
+    <div className="about" id="about">
+      <Reveal className="about-left">
         <div className="image-container">
           <img src={about_img} alt="" className="about-img" />
           <div className="about-bubble">{t("about.bubble")}</div>
         </div>
-      </div>
-      <div className="about-right">
+      </Reveal>
+      <Reveal className="about-right" delay={0.2}>
         <div className="about-heading">
           <h3 className="eyebrow">{t("about.subtitle")}</h3>
           <h2>{t("about.title")}</h2>
@@ -52,8 +46,8 @@ const About = () => {
             </div>
           ))}
         </div>
-      </div>
-    </motion.div>
+      </Reveal>
+    </div>
   );
 };
 

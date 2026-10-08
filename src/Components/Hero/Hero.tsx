@@ -1,8 +1,9 @@
 import "./Hero.css";
 import { FaArrowDown } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { scroller } from "react-scroll";
+import { fadeUp, stagger } from "../Reveal/animations";
 
 const Hero = () => {
   const [t] = useTranslation("global");
@@ -18,27 +19,26 @@ const Hero = () => {
 
   return (
     <div className="hero container" id="hero">
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        transition={{ duration: 1.5 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+      <m.div
+        variants={stagger(0.18, 0.15)}
+        initial="hidden"
+        animate="show"
         className="hero-text"
       >
-        <h1>{t("hero.title")}</h1>
-        <p>{t("hero.description")}</p>
-        <p>
+        <m.h1 variants={fadeUp}>{t("hero.title")}</m.h1>
+        <m.p variants={fadeUp}>{t("hero.description")}</m.p>
+        <m.p variants={fadeUp}>
           {t("hero.description1")}
           <br />
           {t("hero.description2")}
-        </p>
-        <div className="hero-actions">
+        </m.p>
+        <m.div variants={fadeUp} className="hero-actions">
           <button className="btn" onClick={handleScroll}>
             {t("hero.button")}
             <FaArrowDown className="arrowIcon" />
           </button>
-        </div>
-      </motion.div>
+        </m.div>
+      </m.div>
       <div className="hero-scroll-cue" aria-hidden="true">
         <span />
       </div>

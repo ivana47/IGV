@@ -1,6 +1,6 @@
 import "./GoogleMap.css";
 import { FaLocationDot } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import Reveal from "../Reveal/Reveal";
 import { useTranslation } from "react-i18next";
 
 const DIRECTIONS_URL =
@@ -10,13 +10,7 @@ const GoogleMap = () => {
   const [t] = useTranslation("global");
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      transition={{ duration: 0.8 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="map-section"
-    >
+    <Reveal className="map-section">
       <div className="map-card">
         <div className="map-info">
           <span className="eyebrow">{t("contact.mapEyebrow")}</span>
@@ -43,7 +37,7 @@ const GoogleMap = () => {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
-    </motion.div>
+    </Reveal>
   );
 };
 

@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoPerson } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
-import { motion } from 'framer-motion';
+import Reveal from '../Reveal/Reveal';
 import { useTranslation } from "react-i18next";
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -41,13 +41,7 @@ const Contact = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 200 }}
-      transition={{ duration: 1 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      className='contact'
-      id="contact">
+    <Reveal className='contact' id="contact">
       <div className="contact-col">
         <p>
           {t("contact.description1")}<br />
@@ -81,7 +75,7 @@ const Contact = () => {
         </form>
         {result && <span className={`form-result ${status}`}>{result}</span>}
       </div>
-    </motion.div>
+    </Reveal>
   )
 }
 

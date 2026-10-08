@@ -146,7 +146,9 @@
       "email": "Email:",
       "location": "Tuzla, Bosnia and Hercegovina",
       "phone": "Phone:",
-      "creditsTitle": "Credits",
+      "navTitle": "Quick links",
+      "servicesTitle": "Services",
+      "backToTop": "Back to top",
       "rights": "All rights reserved."
     }
   }

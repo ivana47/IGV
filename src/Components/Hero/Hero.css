@@ -6,7 +6,6 @@
     background: linear-gradient(180deg, rgba(9, 17, 28, 0.6) 0%, rgba(14, 26, 42, 0.5) 45%, rgba(9, 17, 28, 0.7) 100%), url('../../assets/pozadina14.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -88,14 +87,31 @@
     61% { transform: translateY(0); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
 }
+/* "Fiksna" pozadina na desktopu: umjesto background-attachment: fixed
+   (koji tjera browser da ponovo iscrta cijeli hero na svakom skrolu)
+   koristimo fixed pseudo-element koji GPU samo pomjera, a clip-path
+   ga ograničava na hero sekciju. Izgleda isto, a skrol je gladak. */
+@media (min-width: 851px){
+    .hero{
+        background: none;
+        clip-path: inset(0);
+    }
+    .hero::before{
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(9, 17, 28, 0.6) 0%, rgba(14, 26, 42, 0.5) 45%, rgba(9, 17, 28, 0.7) 100%), url('../../assets/pozadina14.jpg');
+        background-size: cover;
+        background-position: center;
+        pointer-events: none;
+    }
+}
 @media (max-width: 850px){
     .hero-text h1{
         max-width: 620px;
         margin-left: auto;
         margin-right: auto;
-    }
-    .hero{
-        background-attachment: scroll;
     }
 }
 @media (max-width: 650px){

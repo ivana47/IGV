@@ -1,4 +1,5 @@
 import "./Slider.css";
+import Reveal from "../Reveal/Reveal";
 
 type Image = {
   default: string;
@@ -12,7 +13,7 @@ const Slider = () => {
   ).map((image) => ({ src: (image as Image).default }));
 
   return (
-    <div className="slider">
+    <Reveal className="slider">
       <div className="slide-track">
         {vatrostalniImages.map((image, index) => (
           <div className="logo-card" key={index}>
@@ -27,7 +28,7 @@ const Slider = () => {
           </div>
         ))}
       </div>
-    </div>
+    </Reveal>
   );
 };
 

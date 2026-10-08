@@ -11,7 +11,8 @@ import gallery_9 from '../../assets/front_4/slika8.jpg'
 import gallery_10 from '../../assets/front_4/slika9.jpg'
 import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { motion } from "framer-motion"
+import { useInView } from "framer-motion"
+import Reveal from "../Reveal/Reveal"
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -70,14 +71,18 @@ const Gallery = () => {
     const dragStartXRef = useRef(0)
     const dragDeltaRef = useRef(0)
     const resumeTimeoutRef = useRef<number | undefined>(undefined)
+    const stageRef = useRef<HTMLDivElement>(null)
+    // Karusel se okreće samo dok je na ekranu - inače bespotrebno troši CPU/GPU dok se skrola ostatak stranice
+    const isVisible = useInView(stageRef, { margin: "100px 0px" })
 
     useEffect(() => {
+        if (!isVisible) return
         const id = window.setInterval(() => {
             if (isPausedRef.current || isDraggingRef.current) return
             setIndex((prev) => (prev + 1) % cards.length)
         }, AUTO_ROTATE_MS)
         return () => window.clearInterval(id)
-    }, [])
+    }, [isVisible])
 
     useEffect(() => {
         return () => window.clearTimeout(resumeTimeoutRef.current)
@@ -133,15 +138,11 @@ const Gallery = () => {
     }
 
     return (
-        <motion.div
-            initial={{ opacity: 0, x: -200 }}
-            transition={{ duration: 1 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className='layer'>
+        <Reveal className='layer'>
             <div className="gallery-layer">
                 <p className="carousel-hint">{t("gallery.carouselHint")}</p>
                 <div
+                    ref={stageRef}
                     className="stage"
                     onMouseEnter={pause}
                     onMouseLeave={() => { dragEnd(); resume() }}
@@ -165,16 +166,10 @@ const Gallery = () => {
                     ))}
                 </div>
             </div>
-            <motion.div
-                initial={{ opacity: 0, x: -200 }}
-                transition={{ duration: 1 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className='btn-container'>
+            <div className='btn-container'>
                 <Link to='/images' className='btn dark-btn'>{t("gallery.viewMore")} <FaArrowRight className='arrowIcon' /></Link>
-            </motion.div>
-
-        </motion.div>
+            </div>
+        </Reveal>
     )
 }
 

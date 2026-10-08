@@ -3,7 +3,7 @@ import { TbBuildingFactory } from "react-icons/tb";
 import { PiWallBold } from "react-icons/pi";
 import { IoIosBuild } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
-import { motion } from "framer-motion";
+import Reveal from "../Reveal/Reveal";
 import { useTranslation } from "react-i18next";
 import { useRef, useState, type ReactNode } from "react";
 // @ts-ignore
@@ -49,19 +49,12 @@ const Programs = () => {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.9 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="program"
-      id="program"
-    >
+    <div className="program" id="program">
       <div className="banner-container">
-        <div className="banner-text">
+        <Reveal className="banner-text">
           <div className="banner-features">
             {features.map((feature, i) => (
-              <motion.div
+              <div
                 key={feature.key}
                 className={`feature-box ${active === feature.key ? "active" : ""}`}
                 onMouseEnter={() => setHovered(feature.key)}
@@ -76,14 +69,14 @@ const Programs = () => {
                 <span className="feature-arrow">
                   <FaArrowRight />
                 </span>
-              </motion.div>
+              </div>
             ))}
           </div>
           <br />
           <p className="final-note">{t("programs.note")}</p>
-        </div>
+        </Reveal>
 
-        <div className="banner-image" ref={imageRef}>
+        <Reveal className="banner-image" ref={imageRef} delay={0.2}>
           <div className="image-overlay-container">
             <ImageSlider />
             {showOverlay && (
@@ -125,9 +118,9 @@ const Programs = () => {
               </div>
             )}
           </div>
-        </div>
+        </Reveal>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
