@@ -1,6 +1,6 @@
 import './Footer.css'
 import logo from '../../assets/logo10.png'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import { MdEmail, MdLocationOn, MdKeyboardArrowUp, MdChevronRight } from 'react-icons/md';
@@ -10,9 +10,18 @@ import Reveal from '../Reveal/Reveal';
 
 const Footer = () => {
   const [t] = useTranslation("global");
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = (section: string) => {
-    scroller.scrollTo(section, { smooth: true, offset: -250, duration: 500 });
+    const scroll = () => scroller.scrollTo(section, { smooth: true, offset: -250, duration: 500 });
+
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(scroll, 100);
+    } else {
+      scroll();
+    }
   };
 
   const scrollToTop = () => {
@@ -54,7 +63,7 @@ const Footer = () => {
               </li>
             ))}
             <li>
-              <Link to="/images">
+              <Link to="/images" onClick={scrollToTop}>
                 <MdChevronRight className="footer-chevron" />{t("navbar.gallery")}
               </Link>
             </li>
