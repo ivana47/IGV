@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import "./ImagesPage.css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -43,6 +43,12 @@ const formatImages = (
 
 const ImagesPage = () => {
   const { t } = useTranslation(["global", "imageDescriptions"]);
+
+  // Always open the page at the top (where the category buttons are),
+  // instead of keeping the scroll position from the previous page.
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
 
   const [activeGallery, setActiveGallery] = useState<
     "vatrostalni" | "termoizolacija" | "skela" | null
